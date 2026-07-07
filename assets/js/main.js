@@ -45,3 +45,25 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("scrolled");
     }
 });
+
+const interestButtons = document.querySelectorAll("[data-interest]");
+const interestSelect = document.getElementById("interest");
+const nameInput = document.getElementById("name");
+
+interestButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const interest = this.dataset.interest;
+
+        interestSelect.value = interest;
+
+        setTimeout(() => {
+
+            nameInput.focus();
+
+        }, 500);
+
+    });
+
+});

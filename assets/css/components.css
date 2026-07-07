@@ -913,3 +913,10 @@
 
     background: #d3ba8c;
 }
+
+
+html{
+
+    scroll-behavior: smooth;
+
+}

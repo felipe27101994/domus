@@ -52,7 +52,7 @@
         <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="#hero">
-                    <img src="assets/img/logo.png" alt="Domus" />
+                    <img src="assets/img/logo_domus.png" alt="Domus" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -86,7 +86,7 @@
                         </li>
                     </ul>
 
-                    <a href="#contact" class="btn btn-navbar"> Seja Franqueado </a>
+                    <a href="#contact" data-interest="Licenciamento Domus" class="btn btn-navbar"> Seja Franqueado </a>
                 </div>
             </div>
         </nav>
@@ -105,9 +105,13 @@
                             </p>
 
                             <div class="hero-buttons">
-                                <a href="#market" class="btn btn-domus"> Quero Mercado </a>
+                                <a href="#contact" data-interest="Domus Market" class="btn btn-domus">
+                                    Quero Mercado
+                                </a>
 
-                                <a href="#fit" class="btn btn-outline-domus"> Quero Academia </a>
+                                <a href="#contact" data-interest="Domus Fit" class="btn btn-outline-domus">
+                                    Quero Academia
+                                </a>
                             </div>
 
                             <div class="hero-stats">
@@ -480,7 +484,12 @@
 
                                     <form>
                                         <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="Nome Completo" />
+                                            <input
+                                                type="text"
+                                                id="name"
+                                                class="form-control"
+                                                placeholder="Nome Completo"
+                                            />
                                         </div>
 
                                         <div class="mb-3">
@@ -492,14 +501,14 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <select class="form-select">
-                                                <option selected>Tenho interesse em...</option>
+                                            <select id="interest" class="form-select">
+                                                <option value="" selected>Tenho interesse em...</option>
 
-                                                <option>Domus Market</option>
+                                                <option value="Domus Market">Domus Market</option>
 
-                                                <option>Domus Fit</option>
+                                                <option value="Domus Fit">Domus Fit</option>
 
-                                                <option>Licenciamento Domus</option>
+                                                <option value="Licenciamento Domus">Licenciamento Domus</option>
                                             </select>
                                         </div>
 
