@@ -50,20 +50,47 @@ const interestButtons = document.querySelectorAll("[data-interest]");
 const interestSelect = document.getElementById("interest");
 const nameInput = document.getElementById("name");
 
-interestButtons.forEach(button => {
-
+interestButtons.forEach((button) => {
     button.addEventListener("click", function () {
-
         const interest = this.dataset.interest;
 
         interestSelect.value = interest;
 
         setTimeout(() => {
-
             nameInput.focus();
-
         }, 500);
-
     });
+});
 
+const whatsappButton = document.getElementById("whatsappButton");
+
+let firstOpen = true;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        whatsappButton.classList.add("show");
+
+        if (firstOpen) {
+            firstOpen = false;
+
+            whatsappButton.classList.add("expand");
+
+            setTimeout(() => {
+                whatsappButton.classList.remove("expand");
+            }, 3000);
+        }
+    } else {
+        whatsappButton.classList.remove("show");
+        whatsappButton.classList.remove("expand");
+
+        firstOpen = true;
+    }
+});
+
+whatsappButton.addEventListener("mouseenter", () => {
+    whatsappButton.classList.add("expand");
+});
+
+whatsappButton.addEventListener("mouseleave", () => {
+    whatsappButton.classList.remove("expand");
 });
